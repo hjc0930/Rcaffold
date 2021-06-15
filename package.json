@@ -7,7 +7,8 @@
   "main": "/src/index.tsx",
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/pm_ziguang/frontends-boilerplate.git"
+    "gitee": "https://gitee.com/hjc0930/rcaffold",
+    "github": "https://github.com/hjc0930/Rcaffold"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack server  --config ./scripts/webpack.dev.js",
