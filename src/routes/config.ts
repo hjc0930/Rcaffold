@@ -14,6 +14,7 @@ const routers: IRoute[] = [
     path: "/",
     component: comFactory(import("@/pages")),
   },
+  { redirect: "/" },
 ];
 
 export default routers;

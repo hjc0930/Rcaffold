@@ -24,3 +24,5 @@ yarn build or npm run build
 
   - 路由接口约束优化
   - 添加版本说明
+- v1.0.2
+  - 修改初始的样式文件
