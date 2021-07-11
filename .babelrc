@@ -20,6 +20,14 @@
         },
         "useESModules": true
       }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": true
+      }
     ]
   ]
 }

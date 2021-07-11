@@ -18,6 +18,7 @@ module.exports = merge(common, {
     open: false, // 构建完毕时自动打开默认浏览器
     hot: true, // 热更新
     overlay: true, // 开启浏览器端的错误浮层功能
+    historyApiFallback: true, // 支持 history router
   },
   plugins: [
     new FriendlyErrorsWebpackPlugin({
