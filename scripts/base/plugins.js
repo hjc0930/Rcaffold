@@ -2,8 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebpackBar = require('webpackbar');
-const { HotModuleReplacementPlugin } = require('webpack');
+const { HotModuleReplacementPlugin, DefinePlugin } = require('webpack');
 const dirt = require('./dirt');
+
+// 全局变量
+const definePlugin = Object.entries(require(`${dirt.src}/global.${process.env.RUN_ENV}`))
+  .reduce((result, [key, value]) => ({
+    ...result,
+    [key]: JSON.stringify(value),
+  }), {});
 
 module.exports = [
   new HtmlWebpackPlugin({
@@ -41,4 +48,5 @@ module.exports = [
     ]
   }),
   new HotModuleReplacementPlugin(),
+  new DefinePlugin({ ...definePlugin }),
 ];

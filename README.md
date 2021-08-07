@@ -30,3 +30,5 @@ yarn build or npm run build
   - 引入antd组件库
   - 配置 babel-plugin-import 用来组件库的按需加载
   - 修改webpack配置让脚手架支持 history router
+- v1.0.1
+  - 支持引入全局变量
