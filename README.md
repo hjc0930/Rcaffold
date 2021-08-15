@@ -30,5 +30,7 @@ yarn build or npm run build
   - 引入antd组件库
   - 配置 babel-plugin-import 用来组件库的按需加载
   - 修改webpack配置让脚手架支持 history router
-- v1.1.1
+- v1.2.0
   - 支持引入全局变量
+- v1.2.1
+  - 全局变量文件夹命名规则更改为`.greatrc.RUN_ENV` 并将其移动至根目录下
