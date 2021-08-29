@@ -11,7 +11,7 @@
     "github": "https://github.com/hjc0930/Rcaffold"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack server  --config ./scripts/webpack.dev.js",
+    "dev": "cross-env NODE_ENV=development RUN_ENV=dev webpack server  --config ./scripts/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config ./scripts/webpack.prod.js"
   },
   "devDependencies": {
