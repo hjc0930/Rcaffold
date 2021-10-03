@@ -34,3 +34,8 @@ yarn build or npm run build
   - 支持引入全局变量
 - v1.2.1
   - 全局变量文件夹命名规则更改为`.greatrc.RUN_ENV` 并将其移动至根目录下
+- v1.3.0
+  - 修改`tsconfig.json`和`.babelrc`的配置文件，现在jsx的转换方式改为`react-17的react/jsx-runtime`，无需在每个组件中手动引入`react`
+  - 移除`sass`、`sass-loader`依赖，默认使用less作为css的预处理器
+  - `.babelrc`文件中antd按需加载配置修改
+  - 添加生产环境下的全局变量文件

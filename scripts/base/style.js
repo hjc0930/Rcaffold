@@ -9,6 +9,22 @@ module.exports = [
     use: [loader, 'css-loader']
   },
   {
+    test: /\.less$/,
+    use: [
+      loader,
+      {
+        loader: 'css-loader',
+        options: {
+          importLoaders: true,
+          modules: {
+            localIdentName: '[local]__[name]-[hash:base64:4]'
+          }
+        }
+      },
+      'less-loader'
+    ]
+  },
+  {
     test: /\.(sa|sc)ss$/,
     use: [
       loader,
@@ -21,27 +37,7 @@ module.exports = [
           }
         }
       },
-      {
-        loader: 'sass-loader',
-        options: {
-          implementation: require('sass')
-        }
-      }
+      'sass-loader'
     ]
   },
-  {
-    test: /\.less$/,
-    use: [
-      loader,
-      'css-loader',
-      {
-        loader: 'less-loader',
-        options: {
-          lessOptions: {
-            javascriptEnabled: true
-          }
-        }
-      }
-    ]
-  }
 ];

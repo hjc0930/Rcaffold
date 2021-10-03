@@ -7,7 +7,12 @@
         "modules": false
       }
     ],
-    "@babel/preset-react",
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ],
     "@babel/preset-typescript"
   ],
   "plugins": [
@@ -26,7 +31,7 @@
       {
         "libraryName": "antd",
         "libraryDirectory": "es",
-        "style": true
+        "style": "css"
       }
     ]
   ]
